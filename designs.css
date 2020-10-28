@@ -1,0 +1,152 @@
+
+
+
+
+/* =============================================
+Base styles used by All Screens DO NOT EDIT BELOW
+============================================= */
+ 
+ 
+article, aside, figcaption, figure,
+footer, header, main, nav, section { 
+    display: block;
+}
+ 
+address, article, aside, blockquote, body, cite, 
+div, dl, dt, dd, em, figcaption, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, nav a, ol, p, section, span, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;  
+}
+ 
+body {
+    line-height: 1.2em;
+}
+ 
+ul, ol {
+    list-style: none;
+}
+ 
+nav ul {
+    list-style: none;
+    list-style-image: none;
+}
+ 
+nav a {
+    text-decoration: none;
+}
+ 
+/* =============================================
+Base styles used by All Screens DO NOT EDIT ABOVE
+============================================= */
+ 
+:root {
+    --Html-background: rgb(246,177,177);
+    --Shadow: rgb(51, 51, 51);
+    --Nav-active: rgb(220, 27, 27);
+    --Spotlight: rgb(171, 171, 171);
+    --Text-background: rgb(211, 211, 211);
+    --Text-color: rgb(111, 111, 111);
+
+}
+/* HTML and Body Styles */
+html{
+    background-color: var(--Html-background);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+/* Body */
+body{
+    background-color: white;
+    max-width: 1024px;
+    margin: auto;
+    box-shadow:var(--Shadow) 10px 10px 25px, var(--Shadow) -10px 10px 25px;
+}
+/* Header with a direct parent of body */
+body > header{
+    background-color: white;
+    width: 100%;
+}
+/* Image with the ID logoImage */
+#logoImage{
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+/* Paragraphs */
+p{
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin: 15px;
+}
+/* Unordered list items in the naviagtion with a class of top */
+nav.top ul{
+    margin: 10px;
+}
+/* Same as above but the anchor tags in them */
+nav.top ul a{
+    color: white;
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+/* Same as above but the anchor tags in them hover */
+nav.top ul a:hover {
+    color: var(--Nav-active);
+    text-shadow: 0px 0px 2px black, 0px 0px 15px white;
+}
+
+article p:nth-child(2) img{
+    float: right;
+    width: 45%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 120px;
+    margin-left: 50px;
+    transform: translateY(60px) rotate(30deg);
+    box-shadow: var(--Shadow) 10px -10px 30px;
+}
+
+Section.spotlight{
+    background-color: var(--Spotlight);
+    padding-bottom: 15px;
+    overflow: auto;
+}
+
+Section.spotlight h1{
+    font-size: 2.5rem;
+    color: var(--Text-color);
+    text-shadow: white -2px 0px 1px, white -5px 0px 30px;
+    padding-left: 0px;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+Section.spotlight img{
+    width: 35%;
+    float: left;
+    display: block;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+Section.spotlight p{
+    margin-bottom: 0px;
+}
