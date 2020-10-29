@@ -63,37 +63,37 @@ html{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
-/* Body */
+
 body{
     background-color: white;
     max-width: 1024px;
-    margin: auto;
+    margin: 0 auto;
     box-shadow:var(--Shadow) 10px 10px 25px, var(--Shadow) -10px 10px 25px;
 }
-/* Header with a direct parent of body */
+
 body > header{
     background-color: white;
     width: 100%;
 }
-/* Image with the ID logoImage */
-#logoImage{
+
+img#logoImage{
     display: block;
     width: 100%;
     max-width: 600px;
-    margin: auto;
+    margin: 0 auto;
 }
-/* Paragraphs */
+
 p{
     font-size: 1.2rem;
     line-height: 1.4rem;
     margin: 15px;
 }
-/* Unordered list items in the naviagtion with a class of top */
-nav.top ul{
+
+nav.top ul li{
     margin: 10px;
 }
-/* Same as above but the anchor tags in them */
-nav.top ul a{
+
+nav.top ul li a{
     color: white;
     display: block;
     font-size: 1.2rem;
@@ -103,13 +103,13 @@ nav.top ul a{
     padding-left: 0%;
     padding-right: 0%;
 }
-/* Same as above but the anchor tags in them hover */
-nav.top ul a:hover {
+
+nav.top ul li a:hover {
     color: var(--Nav-active);
     text-shadow: 0px 0px 2px black, 0px 0px 15px white;
 }
 
-article p:nth-child(2) img{
+article p:nth-of-type(2) img{
     float: right;
     width: 45%;
     margin-top: 0px;
@@ -120,13 +120,13 @@ article p:nth-child(2) img{
     box-shadow: var(--Shadow) 10px -10px 30px;
 }
 
-Section.spotlight{
+section.spotlight{
     background-color: var(--Spotlight);
     padding-bottom: 15px;
     overflow: auto;
 }
 
-Section.spotlight h1{
+section.spotlight h1{
     font-size: 2.5rem;
     color: var(--Text-color);
     text-shadow: white -2px 0px 1px, white -5px 0px 30px;
@@ -137,7 +137,7 @@ Section.spotlight h1{
     text-align: right;
 }
 
-Section.spotlight img{
+section.spotlight img{
     width: 35%;
     float: left;
     display: block;
@@ -147,6 +147,218 @@ Section.spotlight img{
     margin-left: 15px;
 }
 
-Section.spotlight p{
+section.spotlight p{
     margin-bottom: 0px;
+}
+
+aside{
+    background-color: var(--Text-background);
+}
+
+aside a{
+    color: var(--Nav-active);
+}
+
+aside h1{
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-bottom: 25px;
+    margin-left: 0px;
+}
+
+aside img{
+    display: block;
+    width:30%;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+dl{
+    text-align: center;
+}
+
+footer{
+    width: 100%;
+}
+
+dl dd{
+    margin-bottom:20px;
+}
+
+nav#bottom {
+    background-color: var(--Nav-active);
+    color: var(--Text-color);
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+nav#bottom ul li{
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+nav#bottom ul li a{
+    color: white;
+}
+
+footer p{
+    color: var(--Text-color);
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: black;
+    margin: 0;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+nav#bottom ul {
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 150px;
+}
+
+@media (max-width: 480px) {
+    body{
+        background-color: var(--Shadow);
+        color: var(--Text-background);
+    }
+
+    aside{
+        display: none;
+    }
+
+    article img{
+        display: none;
+    }
+
+    section.spotlight{
+        display: none;
+    }
+
+    nav.top ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    nav.top ul li{
+        font-size: 2.2rem;
+        flex-basis: 130px;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    nav.top ul li a{
+        padding-top: 50%;
+        padding-bottom: 50%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    nav.top ul li:nth-of-type(1){
+        background: url(images/cw_image01.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        max-width: 100%;
+    }
+    
+    nav.top ul li:nth-of-type(2){
+        background: url(images/cw_image02.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        max-width: 100%;
+    }
+
+    nav.top ul li:nth-of-type(3){
+        background: url(images/cw_image03.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        max-width: 100%;
+    }
+
+    nav.top ul li:nth-of-type(4){
+        background: url(images/cw_image04.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        max-width: 100%;
+    }
+
+    nav.top ul li:nth-of-type(5){
+        background: url(images/cw_image05.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        max-width: 100%;
+    }
+
+    nav.top ul li:nth-of-type(6){
+        background: url(images/cw_image06.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        max-width: 100%;
+    }
+
+    p#links{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    p#links a{
+        background-color: var(--Nav-active);
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 20px;
+    }
+}
+
+@media (min-width: 481px) {
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    article {
+        flex-basis: 400px;
+        flex-grow: 2;
+        flex-shrink: 1;
+    }
+
+    aside{
+        flex-basis: 200px;
+        flex-grow: 1;
+        flex-shrink: 2;
+    }
+
+    nav.top ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        background-color: var(--Shadow);
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav.top ul li{
+        flex-basis: 80px;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+
+    p#links {
+        display: none;
+    }
 }
